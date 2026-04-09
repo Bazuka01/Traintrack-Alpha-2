@@ -1,5 +1,6 @@
 # Traintrack-Alpha-2
 App Name: Traintrack 
+
 App Type: Fitness Tracker 
 
 Problem it Solves: Helps users track fitness data such as BMI, calories, and other fitness metrics while also providing access to training programs and workout guidance.  
