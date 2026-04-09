@@ -14,7 +14,7 @@ Page 3 (Training Page): Displays available trainers and workout programs for use
 
 Key Interactive Features: 
 
--Navigation bar with clickable buttons to switch between Home, Tracking, and Training pages 
--User input fields on the Tracking page for entering fitness data such as weight, steps, and heart rate   
+- Navigation bar with clickable buttons to switch between Home, Tracking, and Training pages 
+- User input fields on the Tracking page for entering fitness data such as weight, steps, and heart rate   
 - Dynamic display of fitness metrics (calories burned, steps taken, BMI, pulse) in a dashboard-style layout   
 - Interactive trainer selection on the Training page with selectable workout categories and options
