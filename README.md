@@ -1,4 +1,4 @@
-# Traintrack-Alpha-2
+# Traintrack-Alpha2
 App Name: Traintrack 
 
 App Type: Fitness Tracker 
