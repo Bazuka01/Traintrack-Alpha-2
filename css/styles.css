@@ -1,1 +1,35 @@
+/*Navbar styles */
+nav {
+    display: flex;  /* puts items in a row */
+    justify-content: space-between; /* pushes items to the edges */
+    align-items: center; /* vertically centers items */
+    padding: 10px; /* adds some space around the content */
+    background-color: rgb(89, 122, 184); /* sets a background color */
+}
 
+/* Styles for the links in the navbar */
+nav a {
+    margin-left: 15px; /* adds space between links */
+    color: white; /* sets link color */
+    text-decoration: none; /* removes underline from links */
+}
+/* Hover effect for the links in the navbar */
+nav a:hover {
+    text-decoration: underline; /* adds underline on hover */
+}
+
+/* Styles for the heading in the navbar */
+nav h1 {
+    margin: 0; /* removes default margin */
+}
+
+main {
+    padding: 20px; 
+}
+
+footer {
+    text-align: center;
+    padding: 10px; 
+    background-color: rgb(89, 122, 184);
+    color: white;
+}
