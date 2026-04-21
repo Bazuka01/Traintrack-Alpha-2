@@ -1,23 +1,139 @@
-<!-- Kathryn -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Tracking Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrainTrak - Fitness Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <h1>TrainTrack</h1>
-        <a href="index.html">Home</a>
-        <a href="page-2.html">Tracking</a>
-        <a href="page-3.html">Training</a>
-    </nav>
 
-    <h2>Your Progress Overview</h2>
+<main>
+ <nav>
+    <div class="menu">☰</div>
+    <button id="watchBtn" class="watch-btn">🔗 Link Smart Watch</button>
+  </nav>
+  <section class="title-section">
+    <h1>Your Progress Overview</h1>
+    <p class="subtitle">Track Your Fitness Journey</p>
+  </section>
 
-    <p>Track Your Fitness Journey</p>
+  <section class="dashboard">
 
+    <!-- Calories -->
+    <section class="card">
+      <h3>Calories Burned</h3>
+      <div class="value">820 kcal</div>
+      <img src="images/flame.png" alt="calories icon" class="icon">
+      <div>
+        Today’s Goal:
+        <input type="number" id="calGoal" value="1400"> kcal
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="card">
+      <h3>Steps Taken</h3>
+      <div class="value">9,548 steps</div>
+      <img src="images/steps.png" alt="steps icon" class="icon">
+    </section>
+
+    <!-- BMI -->
+    <section class="card">
+      <h3>BMI</h3>
+
+      <div>
+        Height:
+        <input type="number" id="height" value="65">
+        <select id="heightUnit">
+          <option value="in">in</option>
+          <option value="cm">cm</option>
+        </select>
+      </div>
+
+      <div class="value" id="bmiValue">--</div>
+      <span class="badge green" id="bmiStatus">--</span>
+
+      <img src="images/scale.png" alt="scale icon" class="icon">
+    </section>
+
+    <!-- Weight Progress -->
+    <section class="card large">
+      <h3>Weight Progress</h3>
+
+      <label>Month:</label>
+      <select id="month">
+        <option>Jan</option><option>Feb</option><option>Mar</option>
+        <option>Apr</option><option>May</option><option>Jun</option>
+        <option>Jul</option><option>Aug</option><option>Sep</option>
+        <option>Oct</option><option>Nov</option><option selected>Dec</option>
+      </select>
+
+      <div>
+        Current Weight:
+        <input type="number" id="currentWeight" value="150">
+        <select id="unit1">
+          <option>lbs</option>
+          <option>kg</option>
+        </select>
+      </div>
+
+      <div>
+        Goal Weight:
+        <input type="number" id="goalWeight" value="140">
+        <select id="unit2">
+          <option>lbs</option>
+          <option>kg</option>
+        </select>
+      </div>
+
+      <canvas id="weightChart"></canvas>
+    </section>
+
+    <!-- Workout Stats -->
+    <section class="card">
+      <h3>Workout Stats</h3>
+      <img src="images/dumbbell.png" alt="dumbbell icon" class="icon">
+
+      <div>
+        Workouts This Week:
+        <input type="number" id="workouts" value="4">
+      </div>
+
+      <div>
+        Active Time:
+        <input type="number" id="activeTime" value="3">
+      </div>
+    </section>
+
+    <!-- Body Fat -->
+    <section class="card">
+      <h3>Body Fat</h3>
+      <div class="value">28%</div>
+      <span class="badge blue">Average</span>
+    </section>
+
+    <!-- Monthly Progress -->
+    <section class="card">
+      <h3>Monthly Progress</h3>
+      <canvas id="monthlyChart"></canvas>
+    </section>
+
+    <!-- Pulse -->
+    <section class="card">
+      <h3>Pulse</h3>
+      <img src="images/heart.png" alt="heart icon" class="icon">
+      <div class="value">76 bpm</div>
+    </section>
+
+  </section>
+
+</main>
+
+ 
 </body>
 </html>
+
+
+
