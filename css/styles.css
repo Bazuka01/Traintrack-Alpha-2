@@ -1,4 +1,4 @@
-{
+* {
   box-sizing: border-box;
 }
 
@@ -175,17 +175,5 @@ input:focus, select:focus {
   max-height: 250px;
 }
 
-footer {
-  background: #f2f4f8;
-  padding: 20px;
-  text-align: center;
-  color: #888;
-  font-size: 14px;
-  border-top: 1px solid #e0e0e0;
-  margin-top: auto;
-}
 
-footer p {
-  margin: 0;
-}
 
