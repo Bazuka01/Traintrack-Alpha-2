@@ -1,21 +1,30 @@
-
-*{
+* {
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-  background: #f2f4f8;
   margin: 0;
   padding: 0;
+}
+
+/* body */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
 }
 
+/* main */
+main {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* fonts */
+h1 {
+  font-size: 48px;
+  color: #333;
+  text-align: center;
 
 .menu {
   font-size: 24px;
@@ -40,96 +49,78 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-main {
-  flex: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 0 15px;
-}
-
-.title-section {
-  text-align: center;
-  padding: 30px 0 20px;
-}
-
-h1 {
-  margin: 0 0 10px 0;
-  font-size: 28px;
+h2 {
+  font-size: 42px;
   color: #333;
 }
 
-.subtitle {
-  color: #888;
-  margin: 0;
-  font-size: 14px;
+h3 {
+  font-size: 24px;
+  color: #333;
 }
 
+h4 {
+  font-size: 24px;
+  color: #333;
+}
+
+p {
+  color: #888;
+  font-size: 16px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* dashboard grid */
 .dashboard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 22px;
   padding: 20px 0 40px;
 }
 
+/* card */
 .card {
-  background: white;
+  background: #e5ecfa;
   padding: 20px;
-  border-radius: 12px;
-  position: relative;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 260px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
 
-.card h3 {
-  margin: 0 0 15px 0;
-  font-size: 16px;
-  color: #333;
-  font-weight: 600;
-}
 
+/* big */
 .large {
   grid-column: span 2;
+  min-height: 300px;
 }
 
-@media (max-width: 768px) {
-  .large {
-    grid-column: span 1;
-  }
-  
-  h1 {
-    font-size: 24px;
-  }
-}
 
+/* values */
 .value {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
-  margin: 15px 0;
   color: #7da0c4;
+  margin: 10px 0;
 }
 
-.icon {
-  width: 140px;
-  height: 140px;
-  object-fit: contain;
-  display: block;
-  margin: 10px auto 15px;
-  opacity: 1;
-}
-
+/* badge */
 .badge {
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 25px;
+  display: block;
+  margin: 8px auto 0;
+  padding: 12px 40px;
+  border-radius: 999px;
   color: white;
   font-size: 16px;
-  font-weight: 600;
-  margin-top: 10px;
+  font-weight: 700;
+  width: fit-content;
 }
 
 .green {
@@ -140,82 +131,193 @@ h1 {
   background: #7da0c4;
 }
 
+/* input */
 input, select {
-  margin: 8px 5px 8px 0;
-  padding: 8px 12px;
+  margin-top: 6px;
+  padding: 8px;
   border-radius: 6px;
   border: 1px solid #ddd;
   font-size: 14px;
-  font-family: inherit;
-  transition: border-color 0.3s ease;
+  width: 80%;
+  max-width: 200px;
+  text-align: center;
 }
 
 input:focus, select:focus {
   outline: none;
   border-color: #7da0c4;
-  box-shadow: 0 0 0 3px rgba(125, 160, 196, 0.1);
+  box-shadow: 0 0 0 3px rgba(125,160,196,0.1);
 }
 
-.card canvas {
-  max-width: 100%;
-  height: auto;
-  margin-top: 15px;
+/* WEIGHT FIELD */
+.weight-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.weight-field span {
+  min-width: 120px;
+  text-align: center;
+  color: #333;
+}
+
+.weight-field input,
+.weight-field select {
+  width: auto;
+  min-width: 90px;
+}
+
+/* button */
+button {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  background: #7da0c4;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  width: 20%;
+}
+
+/* log */
+.log {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* canvas */
+canvas {
+  width: 100% !important;
+  margin-top: 10px;
+}
+
+/* rings */
+.ring-card {
+  min-height: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.ring-box {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+}
+
+circle {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+/* ring legend */
+.ring-legend {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 16px;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #555;
+  min-width: 120px;
+}
+
+.legend-item p {
+  margin: 0;
+  line-height: 1.25;
+  text-align: left;
+}
+
+/* ring colors */
+.bg {
+  stroke: #e0e6f5;
+}
+
+.move {
+  stroke: #ff4d6d;
+  stroke-dasharray: 503;
+  stroke-dashoffset: 160;
+}
+
+.exercise {
+  stroke: #ffa94d;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 120;
+}
+
+.stand {
+  stroke: #51cf66;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 80;
+}
+
+/* images  */
+.check-img{
+  width: 100px;
+  margin: 12px auto;
   display: block;
 }
 
-#monthlyChart {
-  max-height: 250px;
+.dumbbell-img {
+  width: 130px;
+  margin: 12px auto;
+  display: block;
 }
 
-body {
-    margin: 0; /* removes default margin */
-}
-/*Navbar styles */
-nav {
-    display: flex;  /* puts items in a row */
-    justify-content: space-between; /* pushes items to the edges */
-    align-items: center; /* vertically centers items */
-    padding: 10px; /* adds some space around the content */
-    background-color: rgb(89, 122, 184); /* sets a background color */
-
-  
+.flame-img {
+  width: 130px;
+  margin: 12px auto;
+  display: block;
 }
 
-/* Styles for the links in the navbar */
-nav a {
-    margin-left: 15px; /* adds space between links */
-    color: white; /* sets link color */
-    text-decoration: none; /* removes underline from links */
-}
-/* Hover effect for the links in the navbar */
-nav a:hover {
-    text-decoration: underline; /* adds underline on hover */
+.steps-img {
+  width: 130px;
+  margin: 12px auto;
+  display: block;
 }
 
-/* Styles for the heading in the navbar */
-nav h1 {
-    margin: 0; /* removes default margin */
+.scale-img {
+  width: 120px;
+  margin: 12px auto;
+  display: block;
 }
 
-main {
-    max-width: 1100px; /* limits the width of the main content */
-    margin: 0 auto; /* centers the main content */
-    padding: 20px; 
+.heart-img {
+  width: 170px;
+  margin: 12px auto;
+  display: block;
 }
 
-footer {
-    text-align: center;
-    padding: 10px; 
-    background-color: rgb(89, 122, 184);
-    color: white;
+/* charts */
+.chart1-img {
+  max-width: 375px;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  display: block;
 }
 
-.trainers {
-    display: flex; /* puts trainer cards in a row */
-    gap: 20px; /* adds space between trainer cards */
-    flex-wrap: wrap; /* allows cards to wrap to the next line on smaller screens */
-    justify-content: flex-start; /* aligns cards to the left */
-}
+.chart2-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  display: block;
 
 .trainers article {
     border: 1px solid #ccc;
