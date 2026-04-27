@@ -25,6 +25,28 @@ h1 {
   font-size: 48px;
   color: #333;
   text-align: center;
+
+.menu {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.watch-btn {
+  background: white;
+  color: #7da0c4;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.watch-btn:hover {
+  background: #e8eef7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 h2 {
@@ -149,7 +171,7 @@ input:focus, select:focus {
   min-width: 90px;
 }
 
-/* BUTTON */
+/* button */
 button {
   margin-top: 10px;
   padding: 5px;
@@ -161,20 +183,20 @@ button {
   width: 20%;
 }
 
-/* LOG */
+/* log */
 .log {
   margin-top: 10px;
   font-size: 14px;
   color: #555;
 }
 
-/* CANVAS */
+/* canvas */
 canvas {
   width: 100% !important;
   margin-top: 10px;
 }
 
-/* RINGS */
+/* rings */
 .ring-card {
   min-height: auto;
   padding: 24px;
@@ -193,7 +215,7 @@ circle {
   stroke-linecap: round;
 }
 
-/* RING LEGEND */
+/* ring legend */
 .ring-legend {
   display: flex;
   justify-content: center;
@@ -221,7 +243,7 @@ circle {
   text-align: left;
 }
 
-/* RING COLORS */
+/* ring colors */
 .bg {
   stroke: #e0e6f5;
 }
@@ -244,7 +266,7 @@ circle {
   stroke-dashoffset: 80;
 }
 
-/* IMAGES  */
+/* images  */
 .check-img{
   width: 100px;
   margin: 12px auto;
@@ -281,7 +303,7 @@ circle {
   display: block;
 }
 
-/* CHARTS */
+/* charts */
 .chart1-img {
   max-width: 375px;
   width: 100%;
@@ -296,4 +318,43 @@ circle {
   height: auto;
   margin: 10px auto;
   display: block;
+
+.trainers article {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 220px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.trainers article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.trainers button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: rgb(89, 122, 184);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.trainers button:hover {
+    opacity: 0.9;
+}
+
+
+label {
+    font-weight: bold;
+}
+
+select {
+    margin-left: 10px;
+    margin-bottom: 25px;
+    padding: 5px;
 }
