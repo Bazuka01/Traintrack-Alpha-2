@@ -375,14 +375,6 @@ footer p {
   margin: 0;
 }
 
-.trainers {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-top: 20px;
-}
-
 .trainers article {
   border: 1px solid #ccc;
   padding: 15px;
