@@ -408,3 +408,7 @@ footer p {
   color: #555;        /* darker than current gray */
   margin-top: 8px;
 }
+
+.training-footer p{
+text-align: center;
+}
