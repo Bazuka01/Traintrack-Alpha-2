@@ -299,6 +299,8 @@ circle {
   margin: 10px auto;
   display: block;
 }
+
+.trainers {
     background-color: white;
     border-radius: 8px;
     transition: 0.2s;
