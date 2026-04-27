@@ -1,4 +1,4 @@
-# Traintrack-Alpha-2
+# Traintrack-Alpha2
 App Name: Traintrack 
 
 App Type: Fitness Tracker 
@@ -9,7 +9,7 @@ Page 1 (Home Page): Introduces the Traintrack app and provides navigation to oth
 
 Page 2 (Tracking Page): Allows users to log and view fitness data such as weight, steps, and heart rate.
 
-Page 3 (Training Page): Displays available trainers and workout programs for users to follow. 
+Page 3 (Training Page): Displays available trainers for users to browse and contact.
 
 
 Key Interactive Features: 
