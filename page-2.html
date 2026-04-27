@@ -4,38 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TrainTrak - Fitness Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 
 <main>
- <nav>
-    <button id="watchBtn" class="watch-btn">🔗 Link Smart Watch</button>
-  </nav>
+  <button id="watchButton" class="watch-button">🔗 Link Smart Watch</button>
+
   <section class="title-section">
     <h1>Your Progress Overview</h1>
     <p class="subtitle">Track Your Fitness Journey</p>
   </section>
 
   <section class="dashboard">
+  <!-- RINGS -->
+  <section class="card ring-card">
+    <h3>Activity Rings</h3>
+    <div class="ring-box">
+      <svg width="180" height="180">
+        <circle class="bg" cx="90" cy="90" r="80"></circle>
+        <circle class="bg" cx="90" cy="90" r="60"></circle>
+        <circle class="bg" cx="90" cy="90" r="40"></circle>
+        <circle class="move" cx="90" cy="90" r="80"></circle>
+        <circle class="exercise" cx="90" cy="90" r="60"></circle>
+        <circle class="stand" cx="90" cy="90" r="40"></circle>
+      </svg>
+    </div>
+
+    <div class="ring-legend">
+      <div class="legend-item">
+        <span class="dot move-dot"></span>
+        <p><strong>Move</strong> — Calories Burned</p>
+      </div>
+      <div class="legend-item">
+        <span class="dot exercise-dot"></span>
+        <p><strong>Exercise</strong> — Active Minutes</p>
+      </div>
+      <div class="legend-item">
+        <span class="dot stand-dot"></span>
+        <p><strong>Stand</strong> — Active Hours</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- LOG WORKOUT -->
+    <section class="card">
+      <h3>Log Workout</h3>
+      <select id="workoutType" multiple>
+        <option value="run">Run</option>
+        <option value="walk">Walk</option>
+        <option value="bike">Bike</option>
+        <option value="swim">Swim</option>
+        <option value="pull">Pull (Chest, Shoulders, Triceps)</option>
+        <option value="push">Push (Back, Biceps)</option>
+        <option value="legs">Legs</option>
+        <option value="glutes">Glutes</option>
+        <option value="core">Core</option>
+        <option value="full">Full-Body</option>
+        <option value="yoga">Yoga</option>
+      </select>
+      <input id="caloriesInput" type="number" placeholder="Active Hours">
+      <button id="Add">Add Workout</button>
+      <div class="log" id="Log"></div>
+    </section>
+
+    <!-- STREAK -->
+    <section class="card">
+      <h3>Streak</h3>
+      <div class="value" id="streakCount">5 days 🔥</div>
+      <p class="log">Stay consistent!</p>
+    </section>
+
 
     <!-- Calories -->
     <section class="card">
-      <h3>Calories Burned</h3>
-      <div class="value">820 kcal</div>
-      <img src="images/flame.png" alt="calories icon" class="icon">
-      <div>
-        Today’s Goal:
-        <input type="number" id="calGoal" value="1400"> kcal
-      </div>
-    </section>
+  <h3>Calories Burned</h3>
+  <img src="images/flame.png" alt="flame image" class="flame-img">
+
+  <div class="value">820 kcal</div>
+
+  <div>
+    Today's Goal:
+    <input type="number" value="1400"> kcal
+  </div>
+</section>
 
     <!-- Steps -->
     <section class="card">
       <h3>Steps Taken</h3>
       <div class="value">9,548 steps</div>
-      <img src="images/steps.png" alt="steps icon" class="icon">
+      <img src="images/steps.png" alt="steps image" class="steps-img">
     </section>
 
     <!-- BMI -->
@@ -51,10 +110,10 @@
         </select>
       </div>
 
-      <div class="value" id="bmiValue">--</div>
-      <span class="badge green" id="bmiStatus">--</span>
+      <div class="value" id="BMI">23.5</div>
+      <span class="badge green" id="BM1">Healthy</span>
 
-      <img src="images/scale.png" alt="scale icon" class="icon">
+      <img src="images/scale.png" alt="scale image" class="scale-img">
     </section>
 
     <!-- Weight Progress -->
@@ -63,14 +122,22 @@
 
       <label>Month:</label>
       <select id="month">
-        <option>Jan</option><option>Feb</option><option>Mar</option>
-        <option>Apr</option><option>May</option><option>Jun</option>
-        <option>Jul</option><option>Aug</option><option>Sep</option>
-        <option>Oct</option><option>Nov</option><option selected>Dec</option>
+        <option>Jan</option>
+        <option>Feb</option>
+        <option>Mar</option>
+        <option>Apr</option>
+        <option>May</option>
+        <option>Jun</option>
+        <option>Jul</option>
+        <option>Aug</option>
+        <option>Sep</option>
+        <option>Oct</option>
+        <option>Nov</option>
+        <option>Dec</option>
       </select>
 
-      <div>
-        Current Weight:
+      <div class="weight-field">
+        <span>Current Weight:</span>
         <input type="number" id="currentWeight" value="150">
         <select id="unit1">
           <option>lbs</option>
@@ -78,8 +145,8 @@
         </select>
       </div>
 
-      <div>
-        Goal Weight:
+      <div class="weight-field">
+        <span>Goal Weight:</span>
         <input type="number" id="goalWeight" value="140">
         <select id="unit2">
           <option>lbs</option>
@@ -87,23 +154,27 @@
         </select>
       </div>
 
-      <canvas id="weightChart"></canvas>
+      <button id="Add">Add</button>
+
+      <img src="images/chart1.png" alt="Weight Progress Chart" class="chart1-img">
     </section>
 
     <!-- Workout Stats -->
     <section class="card">
       <h3>Workout Stats</h3>
-      <img src="images/dumbbell.png" alt="dumbbell icon" class="icon">
+      <img src="images/dumbbell.png" alt="dumbbell image" class="dumbbell-img">
 
-      <div>
-        Workouts This Week:
-        <input type="number" id="workouts" value="4">
-      </div>
+    <div>
+      Workouts This Week:
+     <input type="number" id="workouts" value="4">
+    </div>
 
-      <div>
-        Active Time:
-        <input type="number" id="activeTime" value="3">
-      </div>
+    <img src="images/check.png" alt="check image" class="check-img">
+
+    <div>
+      Active Time:
+     <input type="text" id="hours" value="3 hrs">
+    </div>
     </section>
 
     <!-- Body Fat -->
@@ -116,13 +187,13 @@
     <!-- Monthly Progress -->
     <section class="card">
       <h3>Monthly Progress</h3>
-      <canvas id="monthlyChart"></canvas>
+      <img src="images/chart2.png" alt="Monthly Progress Chart" class="chart2-img">
     </section>
 
     <!-- Pulse -->
     <section class="card">
       <h3>Pulse</h3>
-      <img src="images/heart.png" alt="heart icon" class="icon">
+      <img src="images/heart.png" alt="heart image" class="heart-img">
       <div class="value">76 bpm</div>
     </section>
 
@@ -133,6 +204,3 @@
  
 </body>
 </html>
-
-
-
